@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
 
     //입력된 음성 메세지 확인 후 동작 처리
     private void FuncVoiceOrderCheck(String VoiceMsg){
-        //if(VoiceMsg.length()<1)return;
+        if(VoiceMsg.length()<=1) return;
 
         String navigation_keyword = typoEditSystem.typo_edit(VoiceMsg, NAVIGATION_KEYWORDS);
         String subway_line_4_keyword = typoEditSystem.typo_edit(VoiceMsg, SUBWAY_LINE_4_KEYWORDS);

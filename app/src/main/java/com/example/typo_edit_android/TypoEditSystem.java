@@ -149,6 +149,8 @@ public class TypoEditSystem {
             start_count = 0;
             end_count = Dictionary[i].length();
 
+            if(end_count >= test.length() || end_count <= start_count) break;
+
             for(int j = 0; j < test.length(); j++) {
                 String temp = test.substring(start_count, end_count);
                 cost = jamo_levenshtein(temp, Dictionary[i]);
